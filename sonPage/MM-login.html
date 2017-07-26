@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <script>
+//        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+    
+    <title>login</title>
+    <!-- 导入 css -->
+  <!-- swiper的css -->
+  <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--导入自己的css-->
+  <link rel="stylesheet" href="../css/MM-login.css"/>
+</head>
+
+<body>
+<!--index页面默认登录页面-->
+<!--进入页面-->
+<div class="login-container">
+    <!--登录&注册页面-->
+    <div class="login">
+        <div class="login-background">
+            <div class="background-shade"></div>
+        </div>
+        <img class="logoImg" src="../images/logo.png" alt="">
+        <div class="login-register">
+            <div class="phone-login">
+                <p>手机号登录</p>
+            </div>
+            <div class="phone-register">
+                <p>注册</p>
+            </div>
+            <a herf="#" class="customer-try">游客试用</a>
+        </div>
+        <div class="other-login">
+            <p class="other-ways">其他登录方式</p>
+            <div class="login-logo">
+                <a class="fa fa-weixin" href="javascript:void(0)"></a>
+                <a class="fa fa-weibo" href="javascript:void(0)"></a>
+                <a class="fa fa-qq" href="javascript:void(0)"></a>
+                <a class="fa fa-twitter" href="javascript:void(0)"></a>
+            </div>
+        </div>
+    </div>
+    <div class="login-in">
+        <span class="fa fa-long-arrow-left"></span>
+        <h2 class="login-title">手机号登录</h2>
+        <p>我用双手成就你的梦想</p>
+        <div class="login-input">
+            <span class="phone fa fa-mobile"></span>
+            <input class="input-phone" type="number" placeholder="请输入手机号">
+        </div>
+        <div class="login-input">
+            <span class="lock fa fa-lock"></span>
+            <input class="input-password password-one" type="password" placeholder="请输入密码">
+        </div>
+        <div class="login-input">
+            <span class="lock fa fa-lock"></span>
+            <input class="input-password password-two" type="password" placeholder="请输入密码">
+        </div>
+        <div class="login-code">
+            <input class="code" type="number" value="">
+            <a class="get-code" href="javascript:void (0)">获取验证码</a>
+        </div>
+        <h3 class="login-button">登录</h3>
+    </div>
+</div>
+
+<!--其他子页面链接进入-->
+    <!--账号页面-->
+    <!--内容主体页面  -->
+        <!--其他子页面-->
+        
+
+
+
+
+</body>
+
+</html>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入登录页面的js文件-->
+<script src="../js/MM-login.js"></script>

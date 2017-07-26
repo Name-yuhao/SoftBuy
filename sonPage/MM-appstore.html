@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+    <title>慢慢买比价网--手机版</title>
+    <!--网页图标-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 导入 css -->
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--导入自己的css-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <!--导入appstore.html,tickets,tickets-son的css样式-->
+    <link rel="stylesheet" href="../css/MM-app-tickets-son.css"/>
+</head>
+
+<body>
+
+  <!--app下载页面-->
+ <div id="MM-appstore">
+      <div class="appstore-top">
+          <a class="myapp" href="javascript:void(0)"><img src="../images/myapp-logo.png" alt=""/></a>
+
+          <div class="appstore-top-img"><img src="../images/96.png" alt=""/></div>
+          <div class="appstore-top-pp">
+              <h3>慢慢买<span>官方</span></h3>
+              <p><span>4.7分</span><span>13万次下载</span><span>10.26MB</span></p>
+          </div>
+          <div class="appstore-top-input">
+              <button>安全下载<i class="iconfont">&#xe62e;</i></button>
+              <button>普通下载</button>
+          </div>
+      </div>
+      <div class="appstore-main">
+          <!--app图片浏览-->
+         <div class="appstore-main-container swiper-container swiper-container-horizontal swiper-container-3d swiper-container-coverflow" style="cursor: grab;">
+             <div class="appstore-main-wrapper swiper-wrapper" style="transform: translate3d(-1111px, 0px, 0px); transition-duration: 0ms;">
+                       <div class="swiper-slide"><img src="http://pp.myapp.com/ma_pic2/0/shot_11385461_1_1495618487/550" alt=""></div>
+                       <div class="swiper-slide"><img src="http://pp.myapp.com/ma_pic2/0/shot_11385461_2_1495618487/550" alt=""></div>
+                       <div class="swiper-slide"><img src="http://pp.myapp.com/ma_pic2/0/shot_11385461_3_1495618487/550" alt=""></div>
+
+             </div>
+             <!-- Add Pagination -->
+             <div class="appstore-main-pagination swiper-pagination swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+         </div>
+          <!--功能介绍-->
+          <div class="appstore-main-info">
+              <div class="main-info-affect">
+                  <p style="transition:-webkit-line-clamp 50ms">慢慢买，一个让你网购省钱省心的随身购物助手。
+                      <br>囊括京东、天猫、一号店、亚马逊、苏宁易购等国内一线电商平台优惠促销信息。
+                      <br>覆盖家用电器、日用商品、母婴商城、手机数码等多个购物品类。
+                      <br>每一款都是人工精挑细选审核，0元单、bug价、神价格，不在话下，天天包邮，低价不停。
+                      <br>让你体验一站式优惠购买，不必切换周转在不同网站中循循比较。
+                      <br>
+                      <br>【功能介绍】
+                      <br>（1）全网比价
+                      <br>只要用手机摄像头对准条形码，电商价格、价格走势、降价提醒，一览无余轻松比价，买到真正的低价，不买亏。
+                      <br>（2）历史价格查询
+                      <br>复制商品链接，了解该商品的历史价格走势，洞悉店铺优惠券，识破商家虚假促销，确保买到最实惠的商品。
+                      <br>（3）国内折扣
+                      <br>慢慢买每天都会不断更新国内的促销信息，包括特价商品和优惠促销活动，每天为网友提供准确的网购产品特价信息。网友也可以参与爆料，经过编辑审核后的内容将送达用户并得到大量网友的评价，形成口碑沉淀的闭环。
+                      <br>（4）白菜价
+                      <br>小编每天为你整理高品质的限时特卖商品，便宜一样有好货。
+                      <br>（5）凑单品
+                      <br>凑单品推荐，自由搭配任意金额商品，让你网购更轻松。不必为了几元钱的免邮找不到凑单的商品！
+                      <br>（6）签到积分
+                      <br>每日签到领积分，免费兑换上百种商品。</p>
+                  <div class="contdown clearfix">
+                      <a  href="javascript:void(0)"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                  </div>
+              </div>
+              <div class="detail-version">
+                  <p class="detail-version-num">版本：2.5.0</p>
+                  <p class="detail-version-time">更新时间：2017年06月17日</p>
+                  <div class="tips"><span class="tips-virus">无病毒</span><span class="tips-adver">无广告</span><span class="tips-userSafe">用户保障</span></div>
+              </div>
+
+          </div>
+      </div>
+      <div class="appstore-evaluate">
+          <h3>评论</h3>
+          <div class="praise">
+              <ul class="clearfix">
+                  <li>很好(3)</li>
+                  <li>非常实用(2)</li>
+                  <li>赞(4)</li>
+                  <li>良心应用(9)</li>
+                  <li>很喜欢(2)</li>
+                  <li>实用(1)</li>
+              </ul>
+          </div>
+          <div class="items">
+              <div class="item clearfix">
+                  <div class="item-left">
+                      <a href="javascript:void(0)"><img src="../images/g.jpg" alt=""/></a>
+                  </div>
+                  <div class="item-right">
+                      <div class="right-top">
+                          <span>7月</span>
+                          <span>3人已赞</span>
+                      </div>
+                      <div class="right-bottom">
+                          <p>一直都是用慢慢买的，特别实用，每次要买东西就会习惯性的去比价</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="item clearfix">
+                  <div class="item-left">
+                      <a href="javascript:void(0)"><img src="../images/g2.jpg" alt=""/></a>
+                  </div>
+                  <div class="item-right">
+                      <div class="right-top">
+                          <span>ben</span>
+                          <span>1人已赞</span>
+                      </div>
+                      <div class="right-bottom">
+                          <p>每一款都是人工精挑细选审价格，折扣信息非常准确</p>
+                      </div>
+                  </div>
+              </div>
+              <div class="item clearfix">
+                  <div class="item-left">
+                      <a href="javascript:void(0)"><img src="../images/g3.jpg" alt=""/></a>
+                  </div>
+                  <div class="item-right">
+                      <div class="right-top">
+                          <span>rose</span>
+                          <span>2人已赞</span>
+                      </div>
+                      <div class="right-bottom">
+                          <p>一直都是用慢慢买的，特别实用，每次要买东西就会习惯性的去比价</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+     <!--底部页脚-->
+     <div id="MM-footer">
+         <div class="footer-top">
+             <a href="../index.html">登录</a>
+             <a href="../index.html">注册</a>
+             <a href="#"><i class="iconfont icon-jiantoushang"></i>&nbsp;返回顶部</a>
+         </div>
+         <div class="footer-bottom">
+             <p>
+                 <a href="javascript:void(0)">手机app下载</a>
+                 <a href="javascript:void(0)">慢慢买手机版</a>
+                 <span>--</span>
+                 <span>掌上比价平台</span>
+             </p>
+             <p>m.manmanbuy.com</p>
+         </div>
+     </div>
+ </div>
+
+</body>
+
+</html>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入自己的js文件 后续增加-->
+<script src="../js/index.js"></script>
+<!--导入登录页面的js文件-->
+
+<!--页面的js使用-->
+
+<!--appstore里面的轮播图-->
+<script>
+
+    var swiper = new Swiper('.appstore-main-container', {
+        pagination: '.appstore-main-pagination',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflow: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows : true
+        }
+    });
+      var lag=true;
+    var ht=$(".main-info-affect >p").height();
+     $(".contdown a").click(function(){
+
+       if(lag)
+       {
+           $(this).parent().siblings("p").height("auto");
+           $(".contdown i").removeClass("fa-angle-down").addClass("fa-angle-up");
+           lag=false;
+       }
+       else{
+           $(this).parent().siblings("p").height(ht);
+           $(".contdown i").removeClass("fa-angle-up").addClass("fa-angle-down");
+           lag=true;
+       }
+
+   })
+
+</script>

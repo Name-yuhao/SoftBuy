@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    display: block;
+}
+
+a,
+span {
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+input {
+    border: 0;
+    outline: none;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+    content: "";
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+//为px单位转换为rem单位，封装函数
+@function rem($size){
+  @return ($size/108*1rem);
+}
+//定义主题颜色
+$NE-color:#d33a31;
+
+$mmbOrange: #FF8B00;
+
+html, body{
+  height:100%;
+  width:100%;
+}
+
+
+.brand-show{
+    display: block;
+}
+.brand-hide{
+    display: none;
+}

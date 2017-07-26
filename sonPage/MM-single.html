@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="../font/Font-Awesome-3.2.1/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="./font/font-awesome-4.7.0/css/font-awesome.min.css">-->
+    <!--<link rel="stylesheet" href="css/single.css"/>-->
+    <link rel="stylesheet" href="../css/single.css"/>
+
+    <!-- 导入swiper插件中的css文件-->
+    <!--<link rel="stylesheet" href="libs/swiper/swiper.min.css"/>-->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.min.css"/>
+    <script>
+        // 屏幕宽度等分成十份
+        document.querySelector('html').style.fontSize = window.screen.width / 10 + 'px';
+    </script>
+</head>
+<body>
+<!--总容器-->
+<div class="single-layout">
+    <!--头部区域-->
+    <header>
+        <a href="../index.html">
+            <span class="left icon-angle-left" id="left"></span>
+        </a>
+        <h3>凑单品</h3>
+        <a href="MM-appstore.html" class="right icon-cloud-download"></a>
+    </header>
+    <!--搜索盒子-->
+    <div id="search-box">
+        <!--搜索栏-->
+        <div id="search-bar">
+            <input type="text" placeholder="请输入你想要的凑单品">
+            <span>搜索</span>
+        </div>
+        <!--排序区域-->
+        <div id="sort">
+            <h5>排序</h5>
+            <div class="btns1">
+                <input type="button" value="销量">
+                <input type="button" value="价格↑">
+                <input type="button" value="价格↓">
+            </div>
+        </div>
+        <!--分类区域-->
+        <div id="classfity">
+            <h5>分类</h5>
+            <div class="btns2">
+                <input type="button" value="全部">
+                <input type="button" value="家具">
+                <input type="button" value="数码">
+                <input type="button" value="办公">
+                <input type="button" value="个护">
+                <input type="button" value="食品">
+                <input type="button" value="母婴">
+                <input type="button" value="服饰">
+            </div>
+        </div>
+    </div>
+    <!--主体区域-->
+    <div class="single-box">
+        <!--商铺/地区/一元/搜索框-->
+        <div class="single-box-hd">
+            <ul>
+                <li><span id="span1">京东</span><a href="javascript:void(0)" class="icon-sort-down"></a></li>
+                <li><span id="span2">华北</span><a href="javascript:void(0)" class="icon-sort-down"></a></li>
+                <li>1元<a href="javascript:void(0)" class="icon-sort-down"></a></li>
+                <li class="icon-search" id="searchBtn"></li>
+            </ul>
+        </div>
+        <!--商品列表-->
+        <div class="goods">
+            <ul class="goods-list" id="goods-list">
+                <!--<li>-->
+                <!--<a href="javascript:void(0)">-->
+                <!--<div class="pic">-->
+                <!--<img src="" alt="">-->
+                <!--</div>-->
+                <!--<div class="goodIfo"></div>-->
+                <!--<div class="goodDetails"></div>-->
+                <!--</a>-->
+                <!--</li>-->
+                <!--<li></li>-->
+                <!--<li></li>-->
+                <!--<li></li>-->
+                <!--<li></li>-->
+                <!--<li></li>-->
+                <!--<li></li>-->
+            </ul>
+        </div>
+        <!--商铺/地区/一元/列表-->
+        <div class="dialog" id="dialog">
+            <div class="jd" id="jd">
+                <ul class="shop-list" id="shop-list">
+                    <!--<li>商铺列表</li>-->
+                </ul>
+            </div>
+            <div class="area" id="area">
+                <ul class="area-list" id="area-list">
+                    <!--<li>地区列表</li>-->
+                    <!--<li>地区列表</li>-->
+                </ul>
+            </div>
+            <div class="price" id="price">
+                <ul class="price-list">
+                    <li>Tree&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;树</li>
+                    <li></li>
+                    <li>New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新</li>
+                    <li></li>
+                    <li>Bee&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;风</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--触底加载-->
+    <div class="load">
+        <span class="icon-spinner icon-spin"></span>
+    </div>
+    <!--回到顶部-->
+    <div class="icon-circle-arrow-up goTop"></div>
+</div>
+</body>
+</html>
+<!--<script src="libs/bootstrap/js/jquery-1.12.4.js"></script>-->
+<script src="../lib/jQuery/jquery-1.12.2.min.js"></script>
+<!--导入swiper插件中的js文件-->
+<script src="../lib/swiper/js/swiper.min.js"></script>
+<!--<script src="libs/swiper/swiper.min.js"></script>-->
+<!--导入模板js文件-->
+<!--<script src="libs/temp/template-web.js"></script>-->
+<script src="../lib/template/js/template-web.js"></script>
+<!--导入自己的js-->
+<script src="../js/single.js"></script>
+
+<!--所有商品列表模板-->
+<script type="text/html" id="singleTemp">
+    {{each result}}
+    <li>
+        <a href="javascript:void(0)">
+            <div class="pic">
+                <img src="{{$value.productImg}}" alt="">
+            </div>
+            <div class="goodIfo">{{$value.productName}}</div>
+            <div class="goodDetails clearfix">
+                <div class="pr fl">{{$value.productPrice}}</div>
+                <div class="coudan fr">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+</script>
+<!--商铺模板-->
+<script type="text/html" id="singleshopTemp">
+    {{each result}}
+    <li index="{{$value.shopId}}">{{$value.shopName}}</li>
+    {{/each}}
+</script>
+<!--地区模板-->
+<script type="text/html" id="singleareaTemp">
+    {{each result}}
+    <li index="{{$value.areaId}}">{{$value.areaName}}</li>
+    {{/each}}
+</script>
+

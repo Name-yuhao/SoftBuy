@@ -1,0 +1,1081 @@
+/*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects
+  /* 2 */
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  margin: 0;
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+a,
+span {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input {
+  border: 0;
+  outline: none;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.brand-show {
+  display: block;
+}
+
+.brand-hide {
+  display: none;
+}
+
+#MM-tickets {
+  height: 100%;
+  width: 100%;
+}
+#MM-tickets .contain-top {
+  height: 1.22222rem;
+  position: relative;
+  padding: 0 1.94444rem 0 0.98148rem;
+  background-color: #F4483E;
+}
+#MM-tickets .contain-top a {
+  height: 1.22222rem;
+  width: 0.98148rem;
+  position: absolute;
+  text-align: center;
+}
+#MM-tickets .contain-top a span {
+  color: white;
+}
+#MM-tickets .contain-top a:nth-child(1) {
+  left: 0;
+}
+#MM-tickets .contain-top a:nth-of-type(2) {
+  width: 1.94444rem;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.0463rem 0;
+}
+#MM-tickets .contain-top a:nth-of-type(2) i {
+  color: white;
+  font-size: 0.55556rem;
+}
+#MM-tickets .contain-top a:nth-of-type(2) p {
+  font-size: 0.2037rem;
+  color: white;
+}
+#MM-tickets .contain-top > p {
+  text-align: center;
+  font-size: 0.55556rem;
+  line-height: 1.22222rem;
+  color: white;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+}
+#MM-tickets .contain-header > ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0.43519rem 0.16667rem 0.73148rem 0.16667rem;
+}
+#MM-tickets .contain-header > ul li {
+  height: 2.2963rem;
+  width: 32%;
+  border: 1px solid #eeeeee;
+  margin-right: 0.09259rem;
+  margin-top: 0.09259rem;
+}
+#MM-tickets .contain-header > ul li a {
+  width: 100%;
+  display: block;
+  padding-top: 0.13889rem;
+}
+#MM-tickets .contain-header > ul li a img {
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+#MM-tickets .contain-header > ul li a p {
+  padding-top: 0.0463rem;
+  font-size: 0.31481rem;
+  text-align: center;
+  color: #5a5a5a;
+}
+#MM-tickets .contain-header > ul li:nth-child(3n) {
+  margin-right: 0;
+}
+#MM-tickets .contain-nav-top {
+  height: 1.07407rem;
+  padding-left: 0.25926rem;
+  background-image: -webkit-linear-gradient(top, white, #ececec);
+  background-image: linear-gradient(to bottom, white, #ececec);
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+#MM-tickets .contain-nav-top a {
+  float: left;
+  height: 1.07407rem;
+  font-size: 0.37037rem;
+  line-height: 1.07407rem;
+  margin-left: 0.18519rem;
+  color: black;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+}
+#MM-tickets .contain-nav-bottom {
+  min-height: 0.72222rem;
+}
+
+#MM-footer {
+  padding-top: 1px;
+  background-color: #efefef;
+}
+#MM-footer .footer-top {
+  height: 1.00926rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #c4c4c4;
+}
+#MM-footer .footer-top a {
+  font-size: 0.35185rem;
+  text-align: center;
+  height: 1.00926rem;
+  line-height: 1.00926rem;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+  color: black;
+  background-color: #efefef;
+  border-right: 1px solid #c4c4c4;
+}
+#MM-footer .footer-top a:nth-child(1) {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+#MM-footer .footer-top a:nth-child(2) {
+  -webkit-box-flex: 2;
+  -webkit-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+}
+#MM-footer .footer-top a:nth-child(3) {
+  -webkit-box-flex: 3;
+  -webkit-flex: 3;
+      -ms-flex: 3;
+          flex: 3;
+  border-right: none;
+}
+#MM-footer .footer-top a:nth-child(3) i {
+  color: #747474;
+}
+#MM-footer .footer-bottom {
+  margin-top: 1px;
+  border-top: 1px solid #c4c4c4;
+  padding-top: 0.44444rem;
+  padding-bottom: 0.55556rem;
+}
+#MM-footer .footer-bottom p {
+  text-align: center;
+  font-size: 0.31481rem;
+  padding-bottom: 0.12963rem;
+}
+#MM-footer .footer-bottom p a:nth-child(1) {
+  color: #F4483E;
+}
+#MM-footer .footer-bottom p a:nth-child(2) {
+  color: black;
+}
+#MM-footer .footer-bottom p span {
+  color: #666666;
+}
+#MM-footer .footer-bottom p:nth-child(2) {
+  color: #666666;
+}
+
+.appstore {
+  width: 1.18519rem;
+  height: 1.32407rem;
+  position: fixed;
+  bottom: 0.18519rem;
+  right: 0.09259rem;
+}
+.appstore img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+#MM-tickets-son {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+#MM-tickets-son .contain-top {
+  height: 1.22222rem;
+  position: relative;
+  padding: 0 1.94444rem 0 0.98148rem;
+  background-color: #F4483E;
+}
+#MM-tickets-son .contain-top a {
+  height: 1.22222rem;
+  width: 0.98148rem;
+  position: absolute;
+  text-align: center;
+}
+#MM-tickets-son .contain-top a span {
+  color: white;
+}
+#MM-tickets-son .contain-top a:nth-child(1) {
+  left: 0;
+}
+#MM-tickets-son .contain-top a:nth-of-type(2) {
+  width: 1.94444rem;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.0463rem 0;
+}
+#MM-tickets-son .contain-top a:nth-of-type(2) i {
+  color: white;
+  font-size: 0.55556rem;
+}
+#MM-tickets-son .contain-top a:nth-of-type(2) p {
+  font-size: 0.2037rem;
+  color: white;
+}
+#MM-tickets-son .contain-top > p {
+  text-align: center;
+  font-size: 0.55556rem;
+  line-height: 1.22222rem;
+  color: white;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+}
+#MM-tickets-son .contain-bottom h5 {
+  font-size: 0.31481rem;
+  line-height: 0.83333rem;
+  height: 0.83333rem;
+  font-weight: 100;
+  color: #999999;
+  text-align: center;
+  padding-top: 0.09259rem;
+}
+#MM-tickets-son .contain-bottom .items {
+  padding-bottom: 0.74074rem;
+  background-color: #e7e7e7;
+}
+#MM-tickets-son .contain-bottom .items .item {
+  border-bottom: 1px solid #e7e7e7;
+  padding: 0.38889rem 0.09259rem 0 0.09259rem;
+  background-color: white;
+}
+#MM-tickets-son .contain-bottom .items .item a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+#MM-tickets-son .contain-bottom .items .item a .left {
+  width: 3.34259rem;
+}
+#MM-tickets-son .contain-bottom .items .item a .left img {
+  width: 2.41667rem;
+  height: 2.26852rem;
+  margin: 0 auto;
+  background-color: black;
+}
+#MM-tickets-son .contain-bottom .items .item a .right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+#MM-tickets-son .contain-bottom .items .item a .right .right-top p {
+  font-size: 0.35185rem;
+  color: black;
+}
+#MM-tickets-son .contain-bottom .items .item a .right .right-top p:nth-child(1) {
+  padding-bottom: 0.46296rem;
+}
+#MM-tickets-son .contain-bottom .items .item a .right .right-bottom {
+  height: 0.83333rem;
+  padding-top: 0.18519rem;
+}
+#MM-tickets-son .contain-bottom .items .item a .right .right-bottom p {
+  font-size: 0.31481rem;
+  color: #FF841D;
+}
+#MM-tickets-son .contain-bottom .bottom-nav {
+  height: 1.07407rem;
+  padding-left: 0.25926rem;
+  background-image: -webkit-linear-gradient(top, white, #ececec);
+  background-image: linear-gradient(to bottom, white, #ececec);
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+#MM-tickets-son .contain-bottom .bottom-nav a {
+  float: left;
+  height: 1.07407rem;
+  font-size: 0.37037rem;
+  line-height: 1.07407rem;
+  margin-left: 0.18519rem;
+  color: black;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-weight: bold;
+}
+
+.contain-banner {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 0;
+  opacity: 0;
+  left: -100%;
+}
+.contain-banner .tickets-son-banner .swiper-wrapper .swiper-slide {
+  width: 100%;
+}
+.contain-banner .tickets-son-banner .swiper-wrapper .swiper-slide img {
+  width: 5.58333rem;
+  height: 4.46296rem;
+  margin: 0 auto;
+}
+.contain-banner .swiper-button-prev, .contain-banner .swiper-button-next {
+  background-color: #fb7d51;
+  opacity: 0.7;
+}
+
+.zhezhao {
+  z-index: 9;
+  opacity: 1;
+  left: 0;
+}
+
+.cover:before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(29, 28, 28, 0.35);
+  top: 0;
+}
+
+#MM-appstore .appstore-top {
+  height: 6.48148rem;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#MM-appstore .appstore-top:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 141px solid transparent;
+  border-right: 141px solid transparent;
+  border-top: 100px solid red;
+  top: 0px;
+  left: -145px;
+}
+#MM-appstore .appstore-top .myapp {
+  position: absolute;
+  top: 0.24074rem;
+  left: 0.24074rem;
+  width: 2.77778rem;
+  height: 0.82407rem;
+}
+#MM-appstore .appstore-top .myapp img {
+  width: 100%;
+}
+#MM-appstore .appstore-top .appstore-top-img {
+  position: relative;
+}
+#MM-appstore .appstore-top .appstore-top-img img {
+  width: 1.66667rem;
+}
+#MM-appstore .appstore-top .appstore-top-img:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: -19px;
+  height: 11px;
+  width: 107px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAAWCAYAAAC8C2KaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOUEyM0JFQzkzNEMxMUU1QURFQkUzNjVENDM5RUIyRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOUEyM0JFRDkzNEMxMUU1QURFQkUzNjVENDM5RUIyRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM5QTIzQkVBOTM0QzExRTVBREVCRTM2NUQ0MzlFQjJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM5QTIzQkVCOTM0QzExRTVBREVCRTM2NUQ0MzlFQjJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/S+LrAAAAnlJREFUeNrsmwGPhSAIgKXz///jk9vd7m0+JgqIWS/cXEqWWnwDzAARU6RIkXwTxLgj3SBhKOjaPoB56BDAfhQA2HnXt4AVFl8HwnNSOGATKAHcOoC822NDt2b7V883GxUJBDJrG831s2P2hgoeBAwu6kMLgqY9Gtuo5wQGhYaOrHUehNdJ4PMCegeocEN4VoAwo+Do0H50HF0nGr9UiVtw0LL0XOrIJBBL5DPAwSLI7gSWBSZ0AIg7J5H3gOFkXBsUXN8dvwQkDpRRPhh5Eta10Fkh84BxpSt6NlheVgadYNJaHRTWX7kwci5z930bY2aUiwPp6JRHdXqfVB0pWIfBwmlcTitY2vpZsZpXbISOdS1YqISnlhVG4Ut15GAqgjot957d77vDzEBFFfpoHGmZy632nIVLAws3a93ova4Clrc1wwuChRNgSdw2ZCCiUJRGmcuvFcZC+iwjuPJASYCBi8tfCtAkbqMmjrO6kNq4TgMUTIIEEwBZ3TuPOEga/Eutksa1w46FGoH0TXStBqj862lJ/HI+UFdQ+nI1MZUXWKCwZDNxmbbsAdjK2Mtjtc7i6kkAssIlgUoSB9E51XqIHT1EChCXsvAFgWAypeqwZy61CyNhscJirbRYmoUM8XPPDECtB1GbwtSZWMRYEWN9UoxFyxxsb/PKDYvUSoUoLJLALlYFY1XwSauCPdj/6vEdK75jzbiN8R2LGWPsvLDLtNDEzguf+M0C3dadF1JZ7BW0gRJ7Be3Aaa3gjMupWXxh+/d0a2J3e+xu3wHqGbvb1WOO/7GeAcxuq3eW9Wzp0pb/seIP4gDoqsA98g/i3SkACGAvnX4EGABzdWE8WjRNNQAAAABJRU5ErkJggg==) no-repeat scroll 0 0;
+  background-size: cover;
+  z-index: 1;
+}
+#MM-appstore .appstore-top .appstore-top-pp {
+  color: grey;
+  padding-top: 0.37037rem;
+}
+#MM-appstore .appstore-top .appstore-top-pp h3 {
+  font-size: 0.46296rem;
+  text-align: center;
+  font-weight: 300;
+  color: black;
+}
+#MM-appstore .appstore-top .appstore-top-pp h3 span {
+  font-size: 0.24074rem;
+  color: #fb7d51;
+  border: 1px solid #c4c4c4;
+}
+#MM-appstore .appstore-top .appstore-top-pp p span {
+  font-size: 0.24074rem;
+  margin-right: 0.27778rem;
+}
+#MM-appstore .appstore-top .appstore-top-input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+#MM-appstore .appstore-top .appstore-top-input button {
+  width: 50%;
+  height: 0.66667rem;
+  border: none;
+}
+#MM-appstore .appstore-top .appstore-top-input button:nth-child(1) {
+  background-color: #00a3ef;
+  color: white;
+}
+#MM-appstore .appstore-top .appstore-top-input button:nth-child(2) {
+  background-color: white;
+  color: grey;
+}
+#MM-appstore .appstore-main {
+  padding: 0.27778rem 0.22222rem 0.27778rem 0.22222rem;
+  background-color: #e8edef;
+}
+#MM-appstore .appstore-main .appstore-main-container {
+  background-color: white;
+  padding-top: 0.92593rem;
+}
+#MM-appstore .appstore-main .appstore-main-container .appstore-main-wrapper .swiper-slide {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#MM-appstore .appstore-main .appstore-main-container .appstore-main-wrapper .swiper-slide img {
+  width: 6.48148rem;
+}
+#MM-appstore .appstore-main .appstore-main-info {
+  padding-top: 0.74074rem;
+  background-color: white;
+}
+#MM-appstore .appstore-main .appstore-main-info .main-info-affect {
+  min-height: 1.85185rem;
+  padding-bottom: 0.37037rem;
+}
+#MM-appstore .appstore-main .appstore-main-info .main-info-affect p {
+  font-size: 0.37037rem;
+  height: 0.87963rem;
+  overflow: hidden;
+  -webkit-transition: 1s;
+          transition: 1s;
+  padding-left: 0.18519rem;
+  line-height: 0.74074rem;
+}
+#MM-appstore .appstore-main .appstore-main-info .main-info-affect .contdown {
+  height: 0.27778rem;
+  text-align: right;
+}
+#MM-appstore .appstore-main .appstore-main-info .main-info-affect .contdown a i {
+  font-size: 0.55556rem;
+}
+#MM-appstore .appstore-main .appstore-main-info .detail-version {
+  padding-bottom: 0.18519rem;
+  font-size: 0.31481rem;
+}
+#MM-appstore .appstore-main .appstore-main-info .detail-version p {
+  padding-bottom: 0.18519rem;
+}
+#MM-appstore .appstore-main .appstore-main-info .detail-version .tips span {
+  margin-right: 0.55556rem;
+}
+#MM-appstore .appstore-evaluate {
+  padding: 0.27778rem 0.22222rem 0.18519rem 0.22222rem;
+}
+#MM-appstore .appstore-evaluate h3 {
+  font-size: 0.37037rem;
+  border-bottom: 1px solid #d9d9d9;
+  padding-bottom: 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .praise ul {
+  padding-top: 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .praise ul li {
+  font-size: 0.33333rem;
+  float: left;
+  color: #f25521;
+  border: 1px solid #e1c9a4;
+  margin-right: 0.18519rem;
+  padding: 0.09259rem 0.18519rem;
+  margin-bottom: 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .items .item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding-top: 0.18519rem;
+  padding-bottom: 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .items .item .item-left {
+  width: 1.66667rem;
+  padding: 0 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .items .item .item-left a img {
+  width: 1.2963rem;
+  margin: 0 auto;
+}
+#MM-appstore .appstore-evaluate .items .item .item-right {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-size: 0.31481rem;
+  padding: 0 0.18519rem;
+}
+#MM-appstore .appstore-evaluate .items .item .item-right .right-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: gray;
+}
+#MM-appstore .appstore-evaluate .items .item .item-right .right-bottom {
+  padding-top: 0.55556rem;
+}
