@@ -1,0 +1,202 @@
+@charset "UTF-8";
+@import "normalize6.0";
+@import "base";
+// 首页橘色
+$orange:#FF841D;
+// 附页红色
+$red:#F4483E;
+//隐藏
+.show{
+  display: block;
+}
+.hide{
+  display: none;
+}
+.commoditesDetailPage-layout{
+  .detailPage-layout-wrap{
+    //border: rem(5) solid #e2e2e3;
+    width: 100%;
+    height:auto;
+    overflow: scroll;
+    .brand-header{
+      width: 100%;
+      height:rem(155);
+      background-color: $NE-color;
+      border-bottom: rem(5) solid #e2e2e3;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-left:rem(53);
+      padding-right:rem(22);
+      .header-logo{
+        display: block;
+        width:rem(560);
+        height:rem(72);
+        img{
+          width: 100%;
+        }
+      }
+      .appdowload{
+        display: block;
+        width:rem(103);
+        height:rem(103);
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .brand-search{
+      position: relative;
+      height:rem(155);
+      width:100%;
+      background-color: white;
+      border-bottom: rem(5) solid #e2e2e3;
+      input:nth-child(1){
+        height:rem(92);
+        width:90%;
+        background-color: #f1f1f1;
+        border-radius: rem(46);
+        position: absolute;
+        top:rem(32);
+        left:5%;
+        padding-left:rem(60);
+        font-size: rem(46);
+        color:#a9a9a9;
+      }
+      input:nth-child(2){
+        height:rem(92);
+        width:18%;
+        background-color: $NE-color;
+        border-radius: rem(46);
+        //font:46px/92px "微软雅黑" !important;
+        color:white;
+        font-family: "微软雅黑";
+        line-height:rem(92);
+        font-size: rem(46);
+        position: absolute;
+        top:rem(32);
+        left:78%;
+      }
+    }
+    .main-content{
+      width: 100%;
+      .page-nav{
+        width: 100%;
+        height:rem(100);
+        border-bottom: rem(5) solid #e2e2e3;
+        background: linear-gradient(to bottom,#fff, #f1f1f1);
+        padding-left: rem(25);
+        ul{
+          height: 100%;
+          width: 100%;
+          li{
+            float: left;
+            a{
+              display: block;
+              color:#5a5a5a;
+              font-size:rem(40);
+              line-height:rem(100);
+            }
+            &:nth-child(2n){
+              color:#5a5a5a;
+              font-size:rem(34);
+              line-height:rem(100);
+              margin: 0 rem(8);
+            }
+          }
+        }
+      }
+      .product-detail{
+        height:rem(850);
+        width: 100%;
+        background-color: #ffffff;
+        border-bottom: rem(4) solid #E7E3E7;
+        padding:0 rem(30);
+        padding-top:rem(50);
+        position: relative;
+        .product-collect{
+          width:rem(118);
+          height:rem(118);
+          background-color: #94d700;
+          border-radius: 50%;
+          position: absolute;
+          right:rem(48);
+          top:rem(48);
+          color:white;
+          font-size: rem(40);
+          line-height:rem(118);
+          text-align: center;
+        }
+        .product-pic{
+          width: 100%;
+          height:rem(520);
+          img{
+            margin: 0 auto;
+            height: 100%;
+          }
+        }
+        .product-title{
+          line-height:rem(60);
+          color:#000;
+          font-size: rem(32);
+          font-family: "微软雅黑 Light";
+          margin-bottom: rem(50);
+        }
+        .product-bottom{
+          font-size: rem(34);
+          display: flex;
+          color:#636563;
+          li{
+            &:nth-child(2){
+              padding-right: rem(140);
+            }
+            &:nth-child(3){
+              color: #a5a2a5;
+            }
+          }
+        }
+      }
+      .price-parameter-comment{
+        width: 100%;
+        background-color: #f7f3f7;
+        padding-top:rem(60);
+        .title-nav{
+          width: 100%;
+          ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            li{
+              height:rem(108);
+              border-bottom: rem(3) solid #c64d00;
+              border-top: rem(3) solid #c64d00;
+              font-size: rem(42);
+              line-height:rem(108);
+              text-align: center;
+              color:#ffffff;
+              background-color: #ffc729;
+              width: 100%;
+              &:nth-child(1){
+                border-right: rem(3) solid #c64d00;
+              }
+              &:nth-child(3){
+                border-left: rem(3) solid #c64d00;
+              }
+              &.actived{
+                background-color: #ff9a10;
+
+              }
+            }
+          }
+        }
+        #coverPic{
+          width: 100%;
+          img{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}

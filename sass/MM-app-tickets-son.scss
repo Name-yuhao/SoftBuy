@@ -1,0 +1,639 @@
+@import './normalize6.0.scss';
+@import './base.scss';
+
+// 首页橘色
+$orange:#FF841D;
+// 附页红色
+$red:#F4483E;
+
+$family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+
+//优惠券页面--刘剑隆
+#MM-tickets{
+  height: 100%;
+  width: 100%;
+  //顶部topnav
+  .contain-top{
+    height:rem(132);
+    position: relative;
+    padding:0 rem(210) 0 rem(106);
+    background-color: $red;
+    a{
+      height:rem(132);
+      width:rem(106);
+      position: absolute;
+      text-align: center;
+      span{
+        color:white;
+      }
+      &:nth-child(1)
+      {
+        left:0;
+      }
+      &:nth-of-type(2)
+      {
+        width:rem(210);
+        top: 0;
+        right:0;
+        //background-color: #007aff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding:rem(5) 0;
+        i{
+          color:white;
+          font-size:rem(60);
+
+        }
+        p{
+          //padding-top:rem(12);
+          font-size: rem(22);
+          color:white;
+        }
+      }
+    }
+    >p{
+      text-align: center;
+      font-size:rem(60);
+      line-height:rem(132);
+      color:white;
+      font-family: $family;
+      font-weight:bold;
+    }
+
+  }
+
+  //顶部优惠卷区
+  .contain-header{
+
+    >ul{
+      display: flex;
+      flex-wrap: wrap;
+      padding:rem(47) rem(18) rem(79)  rem(18);
+      li{
+        height:rem(248);
+        width:32%;
+        border: 1px solid #eeeeee;
+        margin-right:rem(10);
+        margin-top:rem(10);
+        //background-color: #007aff;
+
+        a{
+          width: 100%;
+          display: block;
+          padding-top:rem(15);
+          img{
+            width:50%;
+            height:50%;
+            margin: 0 auto;
+          }
+          p{
+            padding-top:rem(5);
+            font-size: rem(34);
+            text-align: center;
+            color:#5a5a5a;
+          }
+        }
+        &:nth-child(3n)
+        {
+          margin-right:0;
+        }
+      }
+    }
+
+  }
+
+  //导航条
+  .contain-nav{
+
+  }
+  .contain-nav-top{
+    height:rem(116);
+    padding-left:rem(28);
+    background-image:linear-gradient(to bottom,white,#ececec);
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    a{
+      float:left;
+      height:rem(116);
+      font-size:rem(40);
+      line-height:rem(116);
+      margin-left:rem(20);
+      color:black;
+      font-family: $family;
+      font-weight: bold;
+    }
+  }
+  .contain-nav-bottom{
+    min-height: rem(78);
+    //background-color: #007aff;
+  }
+}
+
+
+
+//通用底部foote--刘剑隆
+#MM-footer{
+  //height:rem(289);
+  padding-top:1px;
+  background-color: #efefef;
+  .footer-top{
+    height:rem(109);
+    display: flex;
+    border-top: 1px solid #c4c4c4;
+
+    a{
+      font-size: rem(38);
+      text-align: center;
+      height:rem(109);
+      line-height: rem(109);
+      font-family: $family;
+      font-weight: bold;
+      color:black;
+      background-color: #efefef;
+      border-right: 1px solid #c4c4c4;
+      &:nth-child(1)
+      {
+        flex:2;
+
+      }
+      &:nth-child(2)
+      {
+        flex:2;
+
+      }
+      &:nth-child(3)
+      {
+        flex:3;
+        border-right: none;
+        i{
+          color:#747474;
+        }
+      }
+    }
+  }
+  .footer-bottom{
+    margin-top: 1px;
+    border-top: 1px solid #c4c4c4;
+    padding-top:rem(48);
+    padding-bottom:rem(60);
+    p{
+      text-align: center;
+      font-size: rem(34);
+      padding-bottom: rem(14);
+      a{
+        &:nth-child(1)
+        {
+          color:$red;
+        }
+        &:nth-child(2)
+        {
+          color:black;
+        }
+      }
+      span{
+        color:#666666;
+      }
+      &:nth-child(2)
+      {
+        color:#666666;
+      }
+    }
+  }
+}
+
+//app下载图标
+.appstore {
+  width: rem(128);
+  height: rem(143);
+  position: fixed;
+  bottom:rem(20);
+  right:rem(10);
+  img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+//优惠券子页面--刘剑隆
+body{
+  position: relative;
+}
+#MM-tickets-son{
+  width: 100%;
+  height:100%;
+  position: relative;
+  .contain-top{
+    height:rem(132);
+    position: relative;
+    padding:0 rem(210) 0 rem(106);
+    background-color: $red;
+    a{
+      height:rem(132);
+      width:rem(106);
+      position: absolute;
+      text-align: center;
+      span{
+        color:white;
+      }
+      &:nth-child(1)
+      {
+        left:0;
+      }
+      &:nth-of-type(2)
+      {
+        width:rem(210);
+        top: 0;
+        right:0;
+        //background-color: #007aff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        padding:rem(5) 0;
+        i{
+          color:white;
+          font-size:rem(60);
+
+        }
+        p{
+          //padding-top:rem(12);
+          font-size: rem(22);
+          color:white;
+        }
+      }
+    }
+    >p{
+      text-align: center;
+      font-size:rem(60);
+      line-height:rem(132);
+      color:white;
+      font-family: $family;
+      font-weight:bold;
+    }
+
+  }
+  .contain-bottom{
+    h5{
+      font-size: rem(34);
+      line-height:rem(90);
+      height:rem(90);
+      font-weight: 100;
+      color:#999999;
+      text-align: center;
+      padding-top:rem(10);
+    }
+    .items{
+      padding-bottom:rem(80);
+      background-color:#e7e7e7;
+      .item{
+
+        //background-color: #007aff;
+        border-bottom: 1px solid #e7e7e7;
+        padding:rem(42) rem(10) 0 rem(10);
+        background-color: white;
+
+        a{
+          width: 100%;
+          height: 100%;
+          display: flex;
+          .left{
+            width:rem(361);
+            //background-color: red;
+            img{
+              width:rem(261);
+              height:rem(245);
+              margin:0 auto;
+              background-color: black;
+
+            }
+          }
+          .right{
+            flex:1;
+
+            .right-top
+            {
+
+              p{
+                font-size: rem(38);
+                color:black;
+                &:nth-child(1)
+                {
+                  padding-bottom:rem(50);
+                }
+
+              }
+            }
+            .right-bottom
+            {
+              height:rem(90);
+              padding-top:rem(20);
+              p{
+                font-size: rem(34);
+                color:$orange;
+              }
+            }
+          }
+        }
+      }
+    }
+    .bottom-nav{
+      height:rem(116);
+      padding-left:rem(28);
+      background-image:linear-gradient(to bottom,white,#ececec);
+      border-top: 1px solid #cccccc;
+      border-bottom: 1px solid #cccccc;
+      a{
+        float:left;
+        height:rem(116);
+        font-size:rem(40);
+        line-height:rem(116);
+        margin-left:rem(20);
+        color:black;
+        font-family: $family;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+
+
+
+//轮播图
+.contain-banner{
+  position: fixed;
+  width: 100%;
+  top:50%;
+  transform: translateY(-50%);
+  z-index: 0;
+  opacity:0;
+  left:-100%;
+  .tickets-son-banner{
+
+    .swiper-wrapper{
+
+      .swiper-slide{
+        width: 100%;
+        img{
+          width: rem(603);
+          height:rem(482);
+          margin: 0 auto;
+        }
+      }
+
+
+    }
+  }
+  .swiper-button-prev,.swiper-button-next{
+    background-color: #fb7d51;
+    opacity: 0.7;
+
+  }
+}
+.zhezhao{
+  z-index: 9;
+  opacity:1;
+  left:0;
+}
+//遮罩
+.cover{
+  &:before
+  {
+    content:"";
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(29, 28, 28, 0.35);
+    top:0;
+  }
+}
+
+//app下载页面
+#MM-appstore{
+
+  .appstore-top{
+    &:before
+    {
+      //content: "";
+      //width: 100%;
+      //height:rem(270);
+      //background-color:#fe5a0b;
+      //top:0;
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 141px solid transparent;
+      border-right: 141px solid transparent;
+      border-top: 100px solid red;
+      top: 0px;
+      left: -145px
+    }
+    height:rem(700);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .myapp{
+      position: absolute;
+      top:rem(26);
+      left:rem(26);
+      width:rem(300);
+      height:rem(89);
+      img{
+        width: 100%;
+      }
+    }
+    .appstore-top-img{
+      position: relative;
+      img{
+        width:rem(180);
+
+      }
+      &:before{
+        content:"";
+        position: absolute;
+        bottom: -6px;
+        left: -19px;
+        height: 11px;
+        width: 107px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAAWCAYAAAC8C2KaAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyFpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpDOUEyM0JFQzkzNEMxMUU1QURFQkUzNjVENDM5RUIyRCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpDOUEyM0JFRDkzNEMxMUU1QURFQkUzNjVENDM5RUIyRCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkM5QTIzQkVBOTM0QzExRTVBREVCRTM2NUQ0MzlFQjJEIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkM5QTIzQkVCOTM0QzExRTVBREVCRTM2NUQ0MzlFQjJEIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/S+LrAAAAnlJREFUeNrsmwGPhSAIgKXz///jk9vd7m0+JgqIWS/cXEqWWnwDzAARU6RIkXwTxLgj3SBhKOjaPoB56BDAfhQA2HnXt4AVFl8HwnNSOGATKAHcOoC822NDt2b7V883GxUJBDJrG831s2P2hgoeBAwu6kMLgqY9Gtuo5wQGhYaOrHUehNdJ4PMCegeocEN4VoAwo+Do0H50HF0nGr9UiVtw0LL0XOrIJBBL5DPAwSLI7gSWBSZ0AIg7J5H3gOFkXBsUXN8dvwQkDpRRPhh5Eta10Fkh84BxpSt6NlheVgadYNJaHRTWX7kwci5z930bY2aUiwPp6JRHdXqfVB0pWIfBwmlcTitY2vpZsZpXbISOdS1YqISnlhVG4Ut15GAqgjot957d77vDzEBFFfpoHGmZy632nIVLAws3a93ova4Clrc1wwuChRNgSdw2ZCCiUJRGmcuvFcZC+iwjuPJASYCBi8tfCtAkbqMmjrO6kNq4TgMUTIIEEwBZ3TuPOEga/Eutksa1w46FGoH0TXStBqj862lJ/HI+UFdQ+nI1MZUXWKCwZDNxmbbsAdjK2Mtjtc7i6kkAssIlgUoSB9E51XqIHT1EChCXsvAFgWAypeqwZy61CyNhscJirbRYmoUM8XPPDECtB1GbwtSZWMRYEWN9UoxFyxxsb/PKDYvUSoUoLJLALlYFY1XwSauCPdj/6vEdK75jzbiN8R2LGWPsvLDLtNDEzguf+M0C3dadF1JZ7BW0gRJ7Be3Aaa3gjMupWXxh+/d0a2J3e+xu3wHqGbvb1WOO/7GeAcxuq3eW9Wzp0pb/seIP4gDoqsA98g/i3SkACGAvnX4EGABzdWE8WjRNNQAAAABJRU5ErkJggg==) no-repeat scroll 0 0;
+        background-size: cover;
+        z-index: 1;
+      }
+    }
+    .appstore-top-pp{
+      color:grey;
+      padding-top:rem(40);
+      h3{
+        font-size: rem(50);
+        text-align: center;
+        font-weight: 300;
+        color:black;
+        span{
+          font-size:rem(26);
+          color:#fb7d51;
+          border: 1px solid #c4c4c4;
+
+        }
+      }
+      p{
+        //height:rem(50);
+        span{
+          font-size:rem(26);
+          margin-right:rem(30);
+        }
+      }
+    }
+    .appstore-top-input{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      button{
+        width:50%;
+        height:rem(72);
+        border: none;
+        &:nth-child(1)
+        {
+          background-color: #00a3ef;
+          color:white;
+        }
+        &:nth-child(2)
+        {
+          background-color: white;
+          color:grey;
+        }
+      }
+    }
+  }
+  .appstore-main{
+    padding:rem(30) rem(24) rem(30) rem(24);
+    background-color:#e8edef;
+    .appstore-main-container{
+      background-color: white;
+      padding-top:rem(100);
+      .appstore-main-wrapper{
+
+        .swiper-slide{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img{
+            width:rem(700);
+          }
+        }
+      }
+      .appstore-main-pagination{
+
+
+      }
+    }
+
+    .appstore-main-info{
+      padding-top:rem(80);
+      background-color: white;
+      .main-info-affect{
+        min-height:rem(200);
+        padding-bottom:rem(40);
+        p{
+          font-size:rem(40);
+          height:rem(95);
+          overflow:hidden;
+          transition: 1s;
+          padding-left:rem(20);
+          line-height:rem(80);
+        }
+        .contdown
+        {
+          height:rem(30);
+          text-align: right;
+          a{
+            i{
+              font-size: rem(60);
+            }
+          }
+        }
+
+      }
+      .detail-version{
+        padding-bottom: rem(20);
+        font-size: rem(34);
+        p{
+          padding-bottom:rem(20);
+        }
+        .tips {
+
+          span {
+            margin-right: rem(60);
+          }
+        }
+      }
+
+
+    }
+
+  }
+  .appstore-evaluate {
+    padding:rem(30) rem(24) rem(20) rem(24);
+    h3{
+      font-size: rem(40);
+      border-bottom: 1px solid #d9d9d9;
+      padding-bottom:rem(20);
+    }
+    .praise{
+
+      ul{
+        padding-top:rem(20);
+        li{
+          font-size: rem(36);
+          float:left;
+          color:#f25521;
+          border: 1px solid #e1c9a4;
+          margin-right:rem(20);
+          padding:rem(10) rem(20);
+          margin-bottom:rem(20);
+        }
+      }
+    }
+    .items{
+      .item{
+        display: flex;
+        width: 100%;
+        padding-top:rem(20);
+        padding-bottom:rem(20);
+        .item-left{
+          width:rem(180);
+          padding:0 rem(20);
+
+          a{
+
+            img{
+              width:rem(140);
+              margin:0 auto;
+            }
+          }
+        }
+        .item-right{
+          flex: 1;
+          font-size: rem(34);
+          padding:0 rem(20);
+          .right-top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color:gray;
+          }
+          .right-bottom{
+            padding-top:rem(60);
+          }
+        }
+
+      }
+    }
+  }
+}

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>国内折扣详情</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/more_info.css"/>
+    <script src="lib/jQuery/jquery-1.12.2.js"></script>
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+        $(function(){
+            var id = location.search;
+            console.log(id);
+            $.ajax({
+                url:'http://139.199.192.48:9090/api/getmoneyctrlproduct?productid='+id.substring(4, id.length),
+                type:'get',
+                success: function (data) {
+                    console.log(data);
+                    $.each(data.result, function (i, item) {
+                        $("#remark").text(item.productComCount);
+                        $('h2').text(item.productName);
+                        $(".tips").text(item.productTips);
+                        $('.from').text(item.productFrom);
+                        $('.time').text(item.productTime);
+                        $('.pro_price_s').text(item.productPinkage);
+                        $('#city').html(item.productCity);
+                        $('.ad_text').text(item.productInfo);
+                        $('.ad_pic').html(item.productImgSm);
+                        $('.discount_info').text(item.productInfo1);
+                        $('.big_pic').html(item.productImgLg);
+                        $('#more_info_price').text(item.productPinkage);
+                        $('.pro_buy .discount').text(item.productPinkage);
+//                        $('.total_price').text(item.productPinkage);
+
+                    })
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<div style="display: none;" id="city">
+
+
+</div>
+
+<!--顶部-->
+<div class="more_info_top">
+    <a href="MM-save.html" class="fa fa-angle-left fl"></a>
+    <i class="fa fa-commenting-o"></i><span id="remark"></span>
+</div>
+<!--banxin-->
+<div class="more_info_banxin">
+    <!-- title-->
+    <div class="more_info_title">
+        <!-- name-->
+        <h2></h2>
+    </div>
+    <!-- price-->
+    <p class="pro_price_s"></p>
+    <!--推荐人-->
+    <div class="introducer"><span class="tips"></span> | <span class="from"></span> | <span class="time"></span></div>
+    <!-- checkarea-->
+    <div class="checkArea">
+        <div class="check_text">广东：有货</div>
+
+        <!--<input type="text" value="广东：有货"/>-->
+        <input id="viewCity" type="button" value="查看所有地区"/>
+
+    </div>
+    <!-- ad_area-->
+    <div class="pro_ad">
+        <div class="ad_text">
+
+        </div>
+        <div class="ad_pic">
+        </div>
+    </div>
+    <!-- discount_info-->
+    <p class="discount_info">
+        <!--目前京东商城售价9.5元，
+        <span>限华南、华北、西北地区特价</span>
+        下两件，还可参加<a href="">满两件，总价打5折</a>活动，满减后4.75元/件。-->
+    </p>
+    <!--big_pic-->
+    <div class="big_pic">
+    </div>
+    <!-- more_info_price-->
+    <div class="more_info_price">
+        <p id="more_info_price"></p>
+
+        <p>返现:￥9.5元</p>
+    </div>
+
+    <!-- pro_buy-->
+    <div class="pro_buy">
+        <div class="discount">
+
+        </div>
+        <div class="pro_num">
+            <input type="button" value="-" class="minus"/>
+            <div class="num">1</div>
+            <input type="button" value="+" class="add"/>
+        </div>
+        <div class="pro_kg">
+            <p></p>
+
+            <p>0.98kg</p></div>
+        <div class="pro_undertake">
+            <p>删除</p>
+
+            <p>移到我的关注</p>
+
+            <p>加到我的关注</p>
+        </div>
+    </div>
+    <!-- pay-->
+    <div class="more_info_pay">
+        <div class="pay_left">
+            <p>已选择<span>1</span>件商品
+                总价：<span class="total_price">0</span>
+            </p>
+
+            <p>已节省：￥-9.50</p>
+        </div>
+        <div class="pay_right">去结算</div>
+    </div>
+</div>
+<!-- 最新评价-->
+<div class="new_justify">
+    最新评论
+</div>
+<!--chair-->
+<div class="more_info_chair">
+    <div class="chair"></div>
+    <p>暂时还没评论，快来抢沙发吧！</p>
+</div>
+<div id="MM-footer">
+    <div class="footer-top">
+        <a href="javascript:void(0)">登录</a>
+        <a href="javascript:void(0)">注册</a>
+        <a href="javascript:void(0)"><i class="iconfont icon-jiantoushang"></i>&nbsp;返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            <a href="javascript:void(0)">手机app下载</a>
+            <a href="javascript:void(0)">慢慢买手机版</a>
+            <span>--</span>
+            <span>掌上比价平台</span>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+</body>
+</html>
+<!--导入swiper-->
+<script src="lib/swiper/js/swiper.js"></script>
+<!-- 导入template -->
+<script src="lib/template/js/template-web.js"></script>
+<!--导入自己的js文件 后续增加-->
+<script src="js/more_info.js"></script>

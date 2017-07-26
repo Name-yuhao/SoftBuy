@@ -1,0 +1,383 @@
+    @import './normalize6.0.scss';
+    @import './base.scss';
+    // 首页橘色
+    $orange:#FF841D;
+    // 附页红色
+    $red:#F4483E;
+    //为px单位转换为rem单位，封装函数
+    @function rem($size) {
+        @return ($size/108*1rem);
+    }
+
+    // 比价搜索 start
+    // 谢建军
+    html,
+    body,
+    .MM-Parity {
+        height: 100%;
+    }
+
+    .MM-Parity {
+        display: flex;
+        flex-direction: column;
+        .MM-Parity-top {
+            height: rem(120);
+            background-color: #F9F9F9;
+            //padding: rem(24);
+            //display: flex;
+            i {
+                position: absolute;
+                font-size: rem(45);
+                top: rem(35);
+                left: rem(35);
+                color: #A9A9A9;
+            }
+            input {
+                display:block;
+                height: 100%;
+                width: 100%;
+                border: 1px solid #E0E0E0;
+                border-radius: rem(10);
+                padding-left: rem(80);
+                font-size: rem(38);
+                color: #A9A9A9;
+            }
+        }
+        .MM-Parity-body {
+            position: relative;
+            flex: 1;
+            border-top: 1px solid #E0E0E0;
+            .MM-Parity-body-container {
+                height: 100%;
+                height: 100%;
+                display: flex;
+            }
+            .MM-Parity-com {
+                background-color: white;
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 520;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                transition: .3s;
+                transform: translateX(100%);
+                .MM-Parity-com-top {
+                    position: absolute;
+                    z-index: 521;
+                    background-color: white;
+                    height: rem(107);
+                    width: 100%;
+                    border-top: 1px solid #E7E3E7;
+                    border-bottom: 1px solid #E7E3E7;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    a {
+                        position: relative;
+                        font-size: rem(40);
+                        color: #5A595A;
+                        i {
+                            position: absolute;
+                            top: rem(10);
+                            right: rem(-35);
+                        }
+                    }
+                }
+                .MM-Parity-com-body {
+                    margin-top: rem(107);
+                    height: auto;
+                    ul {
+                        margin-bottom: rem(230);
+                        li {
+                            display: flex;
+                            justify-content: space-between;
+                            height: rem(420);
+                            padding: rem(40) rem(20);
+                            border-bottom: 1px solid #E7E3E7;
+                            >a {
+                                height: 100%;
+                                width: rem(370);
+                                img {
+                                    height: 100%;
+                                    width: 100%;
+                                }
+                            }
+                            >div {
+                                flex: 1;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                padding-left: rem(36);
+                                >a:first-child {
+                                    width: rem(590);
+                                    height: rem(134);
+                                    font-size: rem(42);
+                                    display: inline-block;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;
+                                    line-height: rem(66);
+                                }
+                                >a:nth-child(2) {
+                                    font-size: rem(32);
+                                    i {
+                                        font-style: normal;
+                                    }
+                                    span {
+                                        font-size: rem(42);
+                                        color: red;
+                                    }
+                                }
+                                >div {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    padding-right: rem(45);
+                                    a {
+                                        font-size: rem(34);
+                                        color: #A5A2A5;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .page-container {
+                        height: rem(150);
+                        font-size: rem(36);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transform: translateY(rem(-170));
+                        .next-page,
+                        .prev-page {
+                            margin: 0 rem(30);
+                            width: rem(150);
+                            height: rem(60);
+                            padding: rem(10);
+                            box-shadow: 0 0 rem(5);
+                            border-radius: rem(15);
+                        }
+                    }
+                }
+            }
+            .MM-Parity-body-left {
+                width: rem(270);
+                ul {
+                    width: 100%;
+                    height: auto;
+                    li {
+                        width: 100%;
+                        height: rem(126);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-bottom: 1px solid #E0E0E0;
+                        border-right: 1px solid #E0E0E0;
+                        background-color: #F3F4F6;
+                        &.curr {
+                            background-color: white;
+                            border-right: 0;
+                            a {
+                                color: red;
+                            }
+                        }
+                        a {
+                            font-size: rem(38);
+                            color: black;
+                        }
+                    }
+                }
+            }
+            .MM-Parity-body-right {
+                // flex: 1;
+                width: rem(810);
+                height: rem(1563);
+                .swiper-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                    height: auto;
+                    overflow: hidden;
+                }
+                h3 {
+                    padding-top: rem(32);
+                    padding-left: rem(60);
+                    font-size: rem(40);
+                    color: #666;
+                }
+                ul {
+                    height: auto;
+                    padding: 0 rem(60);
+                    display: flex;
+                    flex-wrap: wrap;
+                    li {
+                        width: 33.3333%;
+                        padding-top: rem(70);
+                        a {
+                            width: 100%;
+                            img {
+                                width: 80%;
+                                margin: 0 auto;
+                            }
+                            p {
+                                font-size: rem(34);
+                                padding-top: rem(20);
+                                text-align: center;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .MM-Parity-footer {
+            height: rem(150);
+            border-top: 1px solid #E0E0E0;
+        }
+    }
+
+    // 比价搜索 end
+    // 白菜价部分 start
+    .mm-cabbage {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .mm-cabbage-top {
+            background-color: #F9F9F9;
+            height: rem(130);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: rem(52);
+            font-weight: normal;
+            padding: 0 rem(60);
+            border-bottom: 1px solid #E0E0E0;
+            h3 {
+                font-weight: normal;
+            }
+        }
+        .mm-cabbage-footer {
+            height: rem(112);
+            .mm-cabbage-nav {
+                height: 100%;
+                .swiper-wrapper {
+                    line-height: rem(112);
+                    .swiper-slide {
+                        text-align: center;
+                        &.curr {
+                            color: red;
+                            border-bottom: 1px solid red;
+                        }
+                    }
+                }
+            }
+        }
+        .mm-cabbage-list {
+            flex: 1;
+            width: 100%;
+            .swiper-wrapper {
+                height: auto;
+                width: 100%;
+                .swiper-slide {
+                    width: 100%;
+                    background-color: #F2F2F2;
+                    >div {
+                        margin-top: rem(20);
+                        border-top: 1px solid #E0E0E0;
+                        border-bottom: 1px solid #E0E0E0;
+                        background-color: white;
+                        width: 100%;
+                        height: rem(448);
+                        padding: rem(30) rem(16);
+                        display: flex;
+                        justify-content: space-between;
+                        >a {
+                            height: 100%;
+                            width: rem(390);
+                            display: block;
+                            img {
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        >div {
+                            flex: 1;
+                            padding-left: rem(30);
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between; // background-color: rebeccapurple;
+                            >a {
+                                font-size: rem(46);
+                                color: black;
+                            }
+                            >.money {
+                                font-style: normal;
+                                font-size: rem(44);
+                                color: red;
+                                i,
+                                del,
+                                em {
+                                    font-style: normal;
+                                    font-size: rem(30);
+                                    color: #A8A8A8
+                                }
+                                em {
+                                    color: red;
+                                }
+                            }
+                            .clearfix {
+                                >b {
+                                    font-size: rem(34);
+                                    color: red;
+                                }
+                                >i {
+                                    position: relative;
+                                    display: inline-block;
+                                    height: rem(30);
+                                    width: rem(200);
+                                    border-radius: rem(30);
+                                    border: 1px solid red;
+                                    background-color: white;
+                                    em {
+                                        position: absolute;
+                                        top: -1px;
+                                        left: 0;
+                                        height: rem(30);
+                                        border-radius: rem(30);
+                                        background-color: red;
+                                    }
+                                    span {
+                                        position: absolute;
+                                        top: -1px;
+                                        left: 40%;
+                                        font-size: rem(12);
+                                        color: #333;
+                                    }
+                                }
+                            }
+                            .mm-cabbage-list-footer{
+                                display: flex;
+                                justify-content: space-between;
+                                padding-right: rem(20);
+                                >a:first-child{
+                                    border: 1px solid red;
+                                    padding: rem(15);
+                                    border-radius: rem(10);
+                                    font-size:rem(34);
+                                    color: red;
+                                }
+                                >a:last-child{
+                                    padding: rem(18);
+                                    border-radius: rem(10);
+                                    font-size: rem(34);
+                                    background-color: #FF5E5D;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } // 白菜价部分

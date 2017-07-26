@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+    <title>慢慢买</title>
+    <!--网页图标-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 导入 css -->
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--导入自己的css-->
+    <link rel="stylesheet" href="../css/parity.css" />
+</head>
+
+<body>
+    <!--index页面默认登录页面-->
+    <!--进入页面-->
+
+    <!--    比价搜索部分 start  by -     -->
+    <div class="MM-Parity">
+        <div class="MM-Parity-top">
+            <i class="fa fa-search"></i>
+            <input type="search" placeholder="输入宝贝名称搜索比价">
+        </div>
+        <div class="MM-Parity-body">
+            <div class="MM-Parity-body-container">
+                <div class="MM-Parity-body-left swiper-container swiper-container-vertical swiper-container-free-mode">
+                    <div class="swiper-wrapper">
+                        <ul class="Parity-categorytitle swiper-slide swiper-slide-active">
+                        </ul>
+                    </div>
+                </div>
+                <div class="MM-Parity-body-right swiper-container swiper-container-vertical swiper-container-free-mode">
+                    <div class="swiper-wrapper">
+                        <h3 class="category-title">大家电</h3>
+                        <ul class="Parity-category swiper-slide swiper-slide swiper-slide-active">
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品列表 start -->
+            <div class="MM-Parity-com swiper-container swiper-container-vertical swiper-container-free-mode">
+                <div class="MM-Parity-com-top">
+                    <a href="javascript:void(0)">综合</a>
+                    <a href="javascript:void(0)">价格<i class="fa fa-sort-up"></i></a>
+                    <a href="javascript:void(0)">评论数</a>
+                </div>
+                <div class="MM-Parity-com-body swiper-wrapper">
+                    <ul class="MM-Parity-com-body-ul swiper-slide swiper-slide swiper-slide-active">
+                    </ul>
+                    <div class="page-container">
+                        <div class="prev-page">上一页</div>
+                        <span class="page-num"><span>1</span>&nbsp;/&nbsp;<span>5</span></span>
+                        <div class="next-page">下一页</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品列表 end -->
+        <div class="MM-Parity-footer">
+        </div>
+    </div>
+    <!--    比价搜索部分 end  by -     -->
+
+    <!-- 左侧分类列表模板 start -->
+    <script type="text/html" id="categorytitle">
+        {{each result}}
+        <li data-id='{{$value.titleId}}'><a href="javascript:void(0)">{{$value.title}}</a></li>
+        {{/each}}
+    </script>
+    <!-- 左侧分类列表模板 end -->
+
+    <!-- 右侧子分类列表模板 start -->
+    <script type="text/html" id="category">
+        {{each result}}
+        <li data-id='{{$value.categoryId}}'><a href="javascript:void(0)">
+             <img src="../images/test.png">
+             <p>{{$value.category}}</p>
+        </a></li>
+        {{/each}}
+    </script>
+    <!-- 右侧子分类列表模板 end -->
+
+    <!-- 弹出的商品列表模板 start -->
+    <script type="text/html" id="MM-Parity-com-body-ul">
+        {{each result}}
+        <li>
+            <a href="javascript:void(0)">{{@$value.productImg}}</a>
+            <div>
+                <a>{{$value.productName}}</a>
+                <a><span>{{$value.productPrice}}</span>&nbsp;起</a>
+                <div>
+                    <a>{{$value.productId}}个比价</a>
+                    <a>{{$value.productCom}}</a>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+    <!-- 弹出的商品列表模板 end -->
+
+</body>
+
+</html>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!-- 导入template -->
+<script src="../lib/template/js/template-web.js"></script>
+<!--导入自己的js文件 后续增加-->
+<script src="../js/parity.js"></script>
+<!--导入登录页面的js文件-->
+
+<!--页面的js使用-->

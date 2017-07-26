@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+    <title>慢慢买</title>
+    <!--网页图标-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 导入 css -->
+    <link rel="stylesheet" href="../lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--导入自己的css-->
+    <link rel="stylesheet" href="../css/parity.css" />
+</head>
+
+<body>
+    <!--index页面默认登录页面-->
+    <!--进入页面-->
+
+    <!--    白菜价部分 start  by -     -->
+    <div class="mm-cabbage">
+        <div class="mm-cabbage-top">
+            <i class="fa fa-chevron-left"></i>
+            <h3>白菜价</h3>
+            <i class="fa fa-search"></i>
+        </div>
+        <div class="mm-cabbage-footer">
+            <div class="mm-cabbage-nav swiper-container">
+                <div class="swiper-wrapper">
+                </div>
+            </div>
+        </div>
+        <div class="mm-cabbage-list swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    白菜价部分 end  by -     -->
+    <!-- 顶部分类信息 start -->
+    <script type="text/html" id="cabbageTitle">
+        {{each result}}
+        <div data-id='{{$value.titleId}}' class="cabbage-title-nav swiper-slide">{{$value.title}}</div>
+        {{/each}}
+    </script>
+    <!-- 顶部分类信息 end -->
+
+    <!-- 请求的商品信息模板 start -->
+    <script type="text/html" id="mm-cabbage-template">
+        {{each result}}
+        <div>
+            <a href="javascript:void(0)">{{@$value.productImg}}</a>
+            <div>
+                <a href="javascript:void(0)">{{@$value.productName}}</a>
+                <div class="money">
+                    {{@$value.productPrice}}
+                </div>
+                {{@$value.productCouponRemain}}
+                <div class="mm-cabbage-list-footer">
+                    {{@$value.productCoupon}} {{@$value.productHref}}
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!-- 请求的商品信息模板 end -->    
+</body>
+
+</html>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!-- 导入bootstrap -->
+<script src="../lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!-- 导入template -->
+<script src="../lib/template/js/template-web.js"></script>
+<!--导入自己的js文件 后续增加-->
+<script src="../js/index.js"></script>
+<!--导入登录页面的js文件-->
+
+<!--页面的js使用-->

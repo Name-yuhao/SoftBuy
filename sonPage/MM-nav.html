@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+    <title></title>
+    <!-- 导入 css -->
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <!--导入自己的css-->
+    <link rel="stylesheet" href="../css/MM-nav.css"/>
+    <link rel="stylesheet" href="../font/font-awesome-4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+<div  id="MM-nav">
+    <a class="fa fa-angle-double-left" href="javascript:void (0)"></a>
+    <a class="fa fa-arrow-down" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia"></a>
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide mm-nav">
+            </div>
+            <div class="swiper-slide shoucang">
+                 <p>还没有添加收藏哦</p>
+                <div class="qiuqiu">
+                    <ul>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                        <li><span></span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination nav-pagination">
+        </div>
+    </div>
+</div>
+<!--页脚-->
+<footer>
+    <p><a href="MM-login.html">登录</a><a href="MM-login.html">注册</a><a href="javascript:void(0)">返回顶部</a>
+    </p>
+    <p><a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.manmanbuy.bijia">手机App下载</a>&nbsp;慢慢买手机版&nbsp;--&nbsp;掌上比价平台</p>
+    <p>m.manmanbuy.com</p>
+</footer>
+</body>
+<script type="text/html" id="MMnav">
+    {{each result}}
+    <div>
+        <span>+</span>
+        <a href="{{$value.navHref}}" target="_blank">
+            <img src="{{$value.navImg}}" alt=""/>
+            <p>{{$value.navTitle}}</p>
+        </a>
+    </div>
+    {{/each}}
+</script>
+</html>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入自己的js文件 后续增加-->
+<!--<script src="../js/index.js"></script>-->
+<!--导入登录页面的js文件-->
+
+<!--页面的js使用-->
+<script src="../lib/template/js/template-web.js"></script>
+<script src="../js/MM-nav.js"></script>

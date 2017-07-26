@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+    <title>慢慢卖-商品详情页</title>
+    <!--网页图标-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 导入 css -->
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css"/>
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--导入自己的css-->
+    <link rel="stylesheet" lang="sass" href="../css/commoditesDetailPage.css"/>
+    <style lang="sass"></style>
+</head>
+
+<body>
+<div class="commoditesDetailPage-layout">
+    <div class="detailPage-layout-wrap">
+        <div class="brand-header">
+            <a href="javascript:void(0);" class="header-logo">
+                <img src="../images/header_logo.png" alt="">
+            </a>
+            <a href="javascript:void(0);" class="appdowload">
+                <img src="../images/header_app.png" alt="">
+            </a>
+        </div>
+        <div class="brand-search">
+            <input type="search" placeholder="请输入你比价的商品">
+            <input type="button" value="搜索">
+        </div>
+        <div class="main-content">
+            <div class="page-nav">
+                <ul>
+                    <li><a href="javascript:void(0);">首页</a></li>
+                    <li>&gt;</li>
+                    <li><a href="javascript:void(0);">平板电视</a></li>
+                    <li>&gt;</li>
+                    <li><a href="javascript:void(0);">海信 55EC520UA</a></li>
+                </ul>
+            </div>
+            <div class="product-detail">
+                <span class="product-collect">收藏</span>
+                <div class="product-pic">
+                    <img src="../images/tv-detailPage.jpg" alt="">
+                </div>
+                <div class="product-title">
+                    <h2>海信(Hisense) XXXXXXXXX 55英寸 超高清4K 智能网络LED电视</h2>
+                </div>
+                <ul class="product-bottom">
+                    <li>当前最低价：</li>
+                    <li>￥2999.00</li>
+                    <li>优选评论：</li>
+                    <li>5874条</li>
+                </ul>
+            </div>
+            <div class="price-parameter-comment">
+                <div class="title-nav">
+                    <ul>
+                        <li class="item actived">比价购买</li>
+                        <li class="item">产品参数</li>
+                        <li class="item">优选评价</li>
+                    </ul>
+                </div>
+                <!--<div class="price-content">-->
+                    <!--<a href="javascript:void(0);" class="price-item">-->
+                        <!---->
+                    <!--</a>-->
+                <!--</div>-->
+                <!--<div class="parameter-content hide"></div>-->
+                <!--<div class="comment-conter hide"></div>-->
+                <div class="coverPic">
+                    <img src="../images/hahah.png" alt="" id = "coverPic" style = "width: 100%">
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
+<!--导入swiper-->
+<script src="lib/swiper/js/swiper.js"></script>
+<!--导入jQuery-->
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入自己的js文件 后续增加-->
+
+<!--导入登录页面的js文件-->
+
+<!--页面的js使用-->
+<script src = "../lib/template/js/template-web.js"></script>
+
+<script src ="../js/stor.js"></script>
+<script src="../js/commoditesDetailPage.js"></script>

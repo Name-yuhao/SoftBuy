@@ -1,0 +1,242 @@
+@import "base";
+@import "normalize6.0";
+//底部
+footer{
+  margin-top: rem(75);
+  height: rem(375);
+  p{
+    text-align: center;
+    font-size: rem(32);
+    color: gray;
+    &:nth-of-type(1){
+      height: rem(105);
+      border-top: 1px solid gray;
+      border-bottom: 1px solid gray;
+      a{
+        height: 100%;
+        display: inline-block;
+        font-size: rem(40);
+        line-height: rem(105);
+        width: 33%;
+        color: gray;
+        &:nth-of-type(2){
+          border-right: 1px solid gray;
+          border-left: 1px solid gray;
+        }
+      }
+    }
+    &:nth-of-type(2){
+      padding: rem(45) 0 rem(30);
+      a{
+        color: red;
+      }
+    }
+  }
+}
+//MM-nav商城导航部分
+#MM-nav{
+  position: relative;
+  &>a{
+    font-size: rem(100);
+    position: absolute;
+    top: rem(20);
+    z-index: 9;
+    color: gray;
+    &:nth-of-type(1){
+      left: rem(60);
+    }
+    &:nth-of-type(2){
+      right: rem(60);
+      font-size: rem(80);
+      top: rem(34);
+      color: #004040;
+    }
+  }
+  .swiper-container{
+    .nav-pagination{
+      top: 0;
+      height: rem(90);
+      span{
+        width: rem(180);
+        height: rem(90);
+        font-size: rem(70);
+        font-weight: 900;
+        border-radius: 0;
+        background-color: transparent;
+        line-height: rem(90);
+        color: green;
+        text-align: center;
+      }
+    }
+  }
+  .mm-nav,.shoucang{
+    display: flex;
+    flex-wrap: wrap;
+    padding: rem(150) 0 rem(75);
+    align-content: center;
+    &>div {
+      width: 33.333%;
+      height: rem(355);
+      position: relative;
+      &>span {
+        width: rem(60);
+        height: rem(60);
+        line-height: rem(60);
+        text-align: center;
+        font-size: rem(50);
+        color: #fff;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 9999;
+        top: rem(10);
+        right: rem(10);
+        background-color: #8caa31;
+      }
+    }
+    a{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background-color: #f4f4f4;
+      border: 1px solid #bebebe;
+      width: 100%;
+      height: 100%;
+      font-size: rem(44);
+      z-index: -9999;
+      color: gray;
+      img{
+        width: rem(60);
+        height: rem(60);
+        margin: 0 auto;
+      }
+      p{
+        padding-top: rem(80);
+        text-align: center;
+      }
+    }
+  }
+  .shoucang{
+    &>p{
+      padding: rem(500) 0 0 20%;
+      font-size: rem(70);
+      color: gray;
+    }
+    .qiuqiu{
+      width: 100%;
+      height: rem(800);
+      margin-top: rem(300);
+      ul{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+        list-style: none;
+        position: relative;
+      }
+      ul::before{
+        content: '';
+        position: absolute;
+        width: 1%;
+        height: 1%;
+        background-color: #004040;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        margin-left: -0.5%;
+        margin-top: -0.5%;
+      }
+      ul li{
+        height: 45%;
+        border-left: 1px solid gray;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform-origin: top;
+      }
+      @keyframes ani0 {
+        12.5%{transform: rotate(335.5deg)}
+        25%{transform: rotate(342.5deg)}
+        37.5%{transform: rotate(349.5deg)}
+        50%{transform: rotate(356.5deg)}
+        62.5%{transform: rotate(363.5deg)}
+        75%{transform: rotate(370.5deg)}
+        87.5%{transform: rotate(377.5deg)}
+        100%{transform: rotate(384.5deg)}
+      }
+      @keyframes ani1 {
+        12.5%{transform: rotate(24.5deg)}
+        25%{transform: rotate(335.5deg)}
+        37.5%{transform: rotate(342.5deg)}
+        50%{transform: rotate(349.5deg)}
+        62.5%{transform: rotate(356.5deg)}
+        75%{transform: rotate(363.5deg)}
+        87.5%{transform: rotate(370.5deg)}
+        100%{transform: rotate(377.5deg)}
+      }
+      @keyframes ani2 {
+        12%{transform: rotate(17.5deg)}
+        25%{transform: rotate(24.5deg)}
+        37.5%{transform: rotate(335.5deg)}
+        50%{transform: rotate(342.5deg)}
+        62.5%{transform: rotate(349.5deg)}
+        75%{transform: rotate(356.5deg)}
+        87.5%{transform: rotate(363.5deg)}
+        100%{transform: rotate(370.5deg)}
+      }
+      @keyframes ani3 {
+        12.5%{transform: rotate(10.5deg)}
+        25%{transform: rotate(17.5deg)}
+        37.5%{transform: rotate(24.5deg)}
+        50%{transform: rotate(335.5deg)}
+        62.5%{transform: rotate(342.5deg)}
+        75%{transform: rotate(349.5deg)}
+        87.5%{transform: rotate(356.5deg)}
+        100%{transform: rotate(363.5deg)}
+      }
+      @keyframes ani4 {
+        12.5%{transform: rotate(3.5deg)}
+        25%{transform: rotate(10.5deg)}
+        37.5%{transform: rotate(17.5deg)}
+        50%{transform: rotate(24.5deg)}
+        62.5%{transform: rotate(335.5deg)}
+        75%{transform: rotate(342.5deg)}
+        87.5%{transform: rotate(349.5deg)}
+        100%{transform: rotate(356.5deg)}
+      }
+      @keyframes ani5 {
+        12.5%{transform: rotate(-3.5deg)}
+        25%{transform: rotate(3.5deg)}
+        37.5%{transform: rotate(10.5deg)}
+        50%{transform: rotate(17.5deg)}
+        62.5%{transform: rotate(24.5deg)}
+        75%{transform: rotate(335.5deg)}
+        87.5%{transform: rotate(342.5deg)}
+        100%{transform: rotate(349.5deg)}
+      }
+      @keyframes ani6 {
+        12.5%{transform: rotate(-10.5deg)}
+        25%{transform: rotate(-3.5deg)}
+        37.5%{transform: rotate(3.5deg)}
+        50%{transform: rotate(10.5deg)}
+        62.5%{transform: rotate(17.5deg)}
+        75%{transform: rotate(24.5deg)}
+        87.5%{transform: rotate(335.5deg)}
+        100%{transform: rotate(342.5deg)}
+      }
+      @keyframes ani7 {
+        12.5%{transform: rotate(-17.5deg)}
+        25%{transform: rotate(-10.5deg)}
+        37.5%{transform: rotate(-3.5deg)}
+        50%{transform: rotate(3.5deg)}
+        62.5%{transform: rotate(10.5deg)}
+        75%{transform: rotate(17.5deg)}
+        87.5%{transform: rotate(24.5deg)}
+        100%{transform: rotate(335.5deg)}
+      }
+      ul li span{
+        position: absolute;
+        /*background: radial-gradient(at center,#fff,#000,#000,#000);*/
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+    <title>慢慢买比价网--手机版</title>
+    <!--网页图标-->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <!-- 导入 css -->
+    <!-- swiper的css -->
+    <link rel="stylesheet" href="../lib/swiper/css/swiper.css" />
+    <!--引入awesome font 字体图标库-->
+    <link href="../font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!--导入自己的css-->
+    <link rel="stylesheet" href="../css/index.css"/>
+    <!--引入iconfont字体图标css-->
+    <link rel="stylesheet" type="text/css" href="../lib/fonticon/iconfont.css">
+    <!--导入appstore.html,tickets,tickets-son的css样式-->
+    <link rel="stylesheet" href="../css/MM-app-tickets-son.css"/>
+</head>
+
+<body>
+ <!--列表template模板-->
+<script type="text/html" id="tickets-son-list">
+  {{each result}}
+
+      <div class="item"><a href="javascript:void(0)">
+          <div class="left">{{#$value.couponProductImg}}</div>
+          <div class="right">
+              <div class="right-top">
+                  <p>{{$value.couponProductName}}</p>
+                  <p>{{$value.couponProductPrice}}</p>
+              </div>
+              <div class="right-bottom">
+                  <p>{{$value.couponProductTime}}</p>
+              </div>
+          </div>
+      </a></div>
+
+  {{/each}}
+</script>
+
+ <!--轮播图template模板-->
+ <script type="text/html" id="tickets-son-banner">
+     {{each result}}
+     <div class="swiper-slide">
+         {{#$value.couponProductImg}}
+     </div>
+     {{/each}}
+ </script>
+
+<!--优惠券MM-tickets-son模板页面 刘剑隆-->
+<div id="MM-tickets-son" class="">
+    <!--顶部优惠券-->
+    <div class="contain-top">
+        <a href="MM-tickets.html"><span class="fa fa-angle-left"></span></a>
+        <p>优惠券</p>
+        <a href="MM-appstore.html">
+            <i class="iconfont">&#xe611;</i><p>app下载</p>
+        </a>
+
+    </div>
+    <div class="contain-bottom">
+         <h5>--点餐前出示手机中的优惠券，即可享受优惠券--</h5>
+        <div class="items">
+        </div>
+        <div class="bottom-nav">
+            <a href="javascript:void(0)">首页 ></a>
+            <a href="MM-tickets.html">优惠券 ></a>
+            <a href="#"></a>
+        </div>
+    </div>
+
+
+    <!--底部页脚-->
+    <div id="MM-footer">
+        <div class="footer-top">
+            <a href="javascript:void(0)">登录</a>
+            <a href="javascript:void(0)">注册</a>
+            <a href="javascript:void(0)"><i class="iconfont icon-jiantoushang"></i>&nbsp;返回顶部</a>
+        </div>
+        <div class="footer-bottom">
+            <p>
+                <a href="javascript:void(0)">手机app下载</a>
+                <a href="javascript:void(0)">慢慢买手机版</a>
+                <span>--</span>
+                <span>掌上比价平台</span>
+            </p>
+            <p>m.manmanbuy.com</p>
+        </div>
+    </div>
+</div>
+
+ <div class="contain-banner">
+     <!--优惠券子页面轮播图-->
+     <div class="tickets-son-banner swiper-container swiper-container-horizontal">
+         <div class="swiper-wrapper">
+         </div>
+
+         <!-- 如果需要导航按钮 -->
+         <div class="swiper-button-prev swiper-button-white"></div>
+         <div class="swiper-button-next swiper-button-white"></div>
+     </div>
+
+ </div>
+
+ <!--底部app下载图标-->
+ <a class="appstore" href="MM-appstore.html"><img src="../images/TB2WepTeb1J.eBjSszcXXbFzVXa_!!379516416.png" alt=""/></a>
+</body>
+
+</html>
+<!--导入模板js-->
+<script src="../lib/template/js/template-web.js"></script>
+<!--导入swiper-->
+<script src="../lib/swiper/js/swiper.js"></script>
+<!--导入jQuery-->
+<script src="../lib/jQuery/jquery-1.12.2.js"></script>
+<!--导入自己的js文件 后续增加-->
+<script src="../js/index.js"></script>
+<!--导入登录页面的js文件-->
+<!--页面的js使用-->
+    <!--导入MM-tickets-son的js-->
+<script src="../js/MM-tickets-son.js"></script>
+
+<!--引入swiper滑动js-->
+<script>
+
+    var ticketsSwiper=new Swiper('.tickets-son-banner', {
+
+        // 如果需要前进后退按钮
+        nextButton: '.tickets-son-banner .swiper-button-next',
+        prevButton: '.tickets-son-banner .swiper-button-prev',
+        observer:true,
+        pagination: '.swiper-pagination',
+
+
+
+
+    })
+
+//    给容器绑定每个列表的点击事件
+     var flag=true;
+    $(".contain-bottom .items").on("click",".item",function(){
+
+//            $(".contain-banner").css({"z-index":20, opacity:1,});
+        if(flag)
+        {
+            $(".contain-banner").addClass("zhezhao");
+            $("#MM-tickets-son").addClass("cover");
+            flag=false;
+        }
+        else{
+
+            $(".contain-banner").removeClass("zhezhao");
+            $("#MM-tickets-son").removeClass("cover");
+            flag=true;
+        }
+
+
+    })
+    $(".contain-banner").on("click","",function(){
+
+        $(".contain-banner").removeClass("zhezhao");
+        $("#MM-tickets-son").removeClass("cover");
+    })
+    $(".contain-banner .swiper-button-next").click(function(e){
+        e.stopPropagation();
+    })
+    $(".contain-banner .swiper-button-prev").click(function(e){
+        e.stopPropagation();
+    })
+</script>
+
