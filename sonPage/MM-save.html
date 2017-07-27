@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>慢慢买省钱控--手机版</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="font/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/MM-save.css"/>
+    <script>
+        //        页面一开始为html设置字体大小，为rem单位赋值
+        var screenWidth = window.screen.width;
+        //      console.log(screenWidth);
+        document.querySelector("html").style.fontSize = screenWidth / 10 + 'px';
+    </script>
+
+</head>
+
+<body>
+<!--省钱控-->
+<!--save_header-->
+<div class="save_header clearfix">
+    省钱控
+    <a href="index.html" class="fa fa-angle-left fl"></a>
+    <span class="fr fa fa-hourglass-2">
+        <div class="save_update">
+            <ul>
+                <li><a href="">最新</a><i class="yellowPoint"></i></li>
+                <li><a href="">6小时内排行</a><i></i></li>
+                <li><a href="">12小时内排行</a><i></i></li>
+                <li><a href="">24小时内排行</a><i></i></li>
+            </ul>
+        </div>
+    </span>
+    <a href="#" class="fa fa-search fr" id="save_search"></a>
+</div>
+<!--save_update-->
+<!--<div class="save_update">-->
+<!--<ul>-->
+<!--<li><a href="">最新</a><i class="yellowPoint"></i></li>-->
+<!--<li><a href="">6小时内排行</a><i></i></li>-->
+<!--<li><a href="">12小时内排行</a><i></i></li>-->
+<!--<li><a href="">24小时内排行</a><i></i></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--save_nav-->
+<div class="save_nav clearfix">
+    <div class="nav_item clearfix">
+        <ul>
+            <li><a class="orange_line" href="">全部</a></li>
+            <li><a href="">手机</a></li>
+            <li><a href="">数码</a></li>
+            <li><a href="">母婴</a></li>
+            <li><a href="">美食</a></li>
+            <li><a href="">百货</a></li>
+            <li><a href="">家电</a></li>
+            <li><a href="">办公</a></li>
+            <li><a href="">户外</a></li>
+            <li><a href="">鞋服</a></li>
+            <li><a href="">箱包</a></li>
+            <li><a href="">玩具</a></li>
+            <li><a href="">个护</a></li>
+            <li><a href="">汽车</a></li>
+            <li><a href="">图书</a></li>
+            <li><a href="">其他</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-angle-right" id="nav_more"></i>
+</div>
+<!--save_products-->
+<div class="save_products">
+    <ul id="productList">
+        <!--     <li>
+                 <a href="more_info.html">
+                     <div class="pro_pic"><img src="images/save_shoes.png" alt=""/></div>
+                     <div class="pro_info">
+                         <p class="pro_title">金龙鱼很好吃。。。。</p>
+
+                         <p class="pro_class">稻米油700ml</p>
+
+                         <p class="pro_price">9.9元 限4件</p>
+
+                         <div class="other">
+                             <span>天猫商城&nbsp;|&nbsp;08:47</span>
+                             <span><i class="fa fa-commenting-o"></i>100</span>
+                         </div>
+                     </div>
+                 </a>
+             </li>-->
+    </ul>
+</div>
+<!--save_footer-->
+<div class="save_footer">
+    <div onclick="changgePage('pre');">上一页</div>
+    <input type="text" id="totalPage"/>
+    <div href="javascript:void(0);" onclick="changgePage('next');">下一页</div>
+</div>
+<div id="MM-footer">
+    <div class="footer-top">
+        <a href="javascript:void(0)">登录</a>
+        <a href="javascript:void(0)">注册</a>
+        <a href="javascript:void(0)" id="backTtop"><i class="iconfont icon-jiantoushang"></i>&nbsp;返回顶部</a>
+    </div>
+    <div class="footer-bottom">
+        <p>
+            <a href="javascript:void(0)">手机app下载</a>
+            <a href="javascript:void(0)">慢慢买手机版</a>
+            <span>--</span>
+            <span>掌上比价平台</span>
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</div>
+
+</body>
+
+</html>
+<script src="lib/jQuery/jquery-1.12.2.js"></script>
+<!--<script src="./lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>-->
+<script src="lib/swiper/js/swiper.js"></script>
+<script src="lib/template/js/template-web.js"></script>
+<script src="js/MM-save.js"></script>
+
